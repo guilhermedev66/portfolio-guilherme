@@ -6,9 +6,10 @@ export const skills: Skill[] = [
   { name: 'C#' },
   { name: '.NET' },
   { name: 'ASP.NET Core' },
+  { name: 'APIs REST' },
   { name: 'Entity Framework' },
   { name: 'SQL Server' },
-  { name: 'REST APIs' },
+  { name: 'Git' },
   { name: 'Docker' },
   { name: 'Azure' },
 ]

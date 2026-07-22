@@ -11,7 +11,7 @@ export function Footer() {
             Guilherme Santos da Silva
           </p>
           <p className="text-sm text-neutral-400">
-            Desenvolvedor Back-End .NET
+            Estudante de Engenharia de Software | Back-End .NET
           </p>
         </div>
 

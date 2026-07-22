@@ -19,7 +19,7 @@ export function Home() {
             className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary-500/30 bg-primary-500/10 px-4 py-1.5 text-sm font-medium text-primary-300"
           >
             <FiCode size={16} />
-            Desenvolvedor Back-End .NET
+            Desenvolvedor Back-End .NET | Estudante de Engenharia de Software
           </motion.span>
 
           <motion.h1
@@ -37,8 +37,10 @@ export function Home() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mt-4 max-w-xl text-lg text-neutral-400"
           >
-            Construo APIs e sistemas back-end robustos com C# e .NET, focados em
-            performance, boas práticas e código limpo.
+            Desenvolvo APIs e soluções Back-End com C#, ASP.NET Core e o
+            ecossistema .NET, aplicando boas práticas a cada projeto enquanto
+            aprofundo meus conhecimentos como estudante de Engenharia de
+            Software.
           </motion.p>
 
           <motion.a
@@ -82,9 +84,11 @@ export function Home() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="mt-4 max-w-2xl text-neutral-400"
           >
-            Sou desenvolvedor back-end especializado no ecossistema .NET,
-            trabalhando com C#, ASP.NET Core e bancos de dados relacionais para
-            criar soluções escaláveis e de fácil manutenção.
+            Sou estudante de Engenharia de Software e desenvolvedor Back-End em
+            formação, com foco no ecossistema .NET. Venho me dedicando ao
+            aprendizado de C#, ASP.NET Core, Entity Framework e bancos de
+            dados, aplicando boas práticas de desenvolvimento e versionamento
+            com Git em cada projeto que construo.
           </motion.p>
 
           <div className="mt-10 flex flex-wrap gap-3">
