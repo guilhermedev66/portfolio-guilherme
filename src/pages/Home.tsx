@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { FiArrowRight, FiCode } from 'react-icons/fi'
+import { ProfileImagePlaceholder } from '@/components/ProfileImagePlaceholder'
 import { skills } from '@/data/skills'
 import { projects } from '@/data/projects'
 
@@ -8,47 +9,58 @@ export function Home() {
     <>
       <section
         id="home"
-        className="mx-auto flex max-w-5xl flex-col items-start px-6 py-24"
+        className="mx-auto grid max-w-5xl grid-cols-1 items-center gap-12 px-6 py-24 lg:grid-cols-[1.2fr_1fr] lg:gap-16"
       >
-        <motion.span
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary-500/30 bg-primary-500/10 px-4 py-1.5 text-sm font-medium text-primary-300"
-        >
-          <FiCode size={16} />
-          Desenvolvedor Back-End .NET
-        </motion.span>
+        <div className="flex flex-col items-start">
+          <motion.span
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary-500/30 bg-primary-500/10 px-4 py-1.5 text-sm font-medium text-primary-300"
+          >
+            <FiCode size={16} />
+            Desenvolvedor Back-End .NET
+          </motion.span>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-4xl font-bold text-white sm:text-5xl"
-        >
-          Olá, eu sou Guilherme Santos da Silva
-        </motion.h1>
+          <motion.h1
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="text-4xl font-bold text-white sm:text-5xl"
+          >
+            Olá, eu sou Guilherme Santos da Silva
+          </motion.h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="mt-4 max-w-xl text-lg text-neutral-400"
-        >
-          Construo APIs e sistemas back-end robustos com C# e .NET, focados em
-          performance, boas práticas e código limpo.
-        </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="mt-4 max-w-xl text-lg text-neutral-400"
+          >
+            Construo APIs e sistemas back-end robustos com C# e .NET, focados em
+            performance, boas práticas e código limpo.
+          </motion.p>
 
-        <motion.a
-          href="#projects"
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary-600 px-5 py-2.5 font-medium text-white transition hover:bg-primary-500"
+          <motion.a
+            href="#projects"
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary-600 px-5 py-2.5 font-medium text-white transition hover:bg-primary-500"
+          >
+            Ver projetos
+            <FiArrowRight />
+          </motion.a>
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="flex justify-center lg:justify-end"
         >
-          Ver projetos
-          <FiArrowRight />
-        </motion.a>
+          <ProfileImagePlaceholder />
+        </motion.div>
       </section>
 
       <section id="about" className="border-t border-white/10 bg-neutral-900/40">
