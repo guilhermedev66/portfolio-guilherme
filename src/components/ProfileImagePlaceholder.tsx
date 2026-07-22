@@ -3,7 +3,7 @@ import { FiUser } from 'react-icons/fi'
 
 export function ProfileImagePlaceholder() {
   return (
-    <div className="relative flex h-56 w-56 shrink-0 items-center justify-center sm:h-64 sm:w-64 lg:h-72 lg:w-72">
+    <div className="relative flex h-48 w-48 shrink-0 items-center justify-center sm:h-64 sm:w-64 lg:h-72 lg:w-72">
       <motion.div
         aria-hidden="true"
         animate={{ opacity: [0.35, 0.65, 0.35], scale: [1, 1.08, 1] }}

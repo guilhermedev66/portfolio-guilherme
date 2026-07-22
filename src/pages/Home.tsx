@@ -9,16 +9,16 @@ export function Home() {
     <>
       <section
         id="home"
-        className="mx-auto grid max-w-5xl grid-cols-1 items-center gap-12 px-6 py-24 lg:grid-cols-[1.2fr_1fr] lg:gap-16"
+        className="mx-auto grid max-w-5xl grid-cols-1 items-center gap-12 px-6 py-16 sm:py-20 lg:grid-cols-[1.2fr_1fr] lg:gap-16 lg:py-28"
       >
         <div className="flex flex-col items-start">
           <motion.span
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary-500/30 bg-primary-500/10 px-4 py-1.5 text-sm font-medium text-primary-300"
+            className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary-500/30 bg-primary-500/10 px-3.5 py-1.5 text-xs font-medium text-primary-300 sm:px-4 sm:text-sm"
           >
-            <FiCode size={16} />
+            <FiCode size={16} className="shrink-0" />
             Desenvolvedor Back-End .NET | Estudante de Engenharia de Software
           </motion.span>
 
@@ -26,7 +26,7 @@ export function Home() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-4xl font-bold text-white sm:text-5xl"
+            className="text-4xl leading-tight font-bold tracking-tight text-white sm:text-5xl"
           >
             Olá, eu sou Guilherme Santos da Silva
           </motion.h1>
@@ -35,7 +35,7 @@ export function Home() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="mt-4 max-w-xl text-lg text-neutral-400"
+            className="mt-4 max-w-xl text-lg leading-relaxed text-neutral-400"
           >
             Desenvolvo APIs e soluções Back-End com C#, ASP.NET Core e o
             ecossistema .NET, aplicando boas práticas a cada projeto enquanto
@@ -48,10 +48,10 @@ export function Home() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary-600 px-5 py-2.5 font-medium text-white transition hover:bg-primary-500"
+            className="group mt-8 inline-flex items-center gap-2 rounded-full bg-primary-600 px-5 py-2.5 font-medium text-white transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-primary-500 hover:shadow-lg hover:shadow-primary-500/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950 active:translate-y-0"
           >
             Ver projetos
-            <FiArrowRight />
+            <FiArrowRight className="transition duration-200 group-hover:translate-x-1" />
           </motion.a>
         </div>
 
@@ -66,13 +66,13 @@ export function Home() {
       </section>
 
       <section id="about" className="border-t border-white/10 bg-neutral-900/40">
-        <div className="mx-auto max-w-5xl px-6 py-20">
+        <div className="mx-auto max-w-5xl px-6 py-16 sm:py-20 lg:py-24">
           <motion.h2
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-3xl font-bold text-white"
+            className="text-3xl font-bold tracking-tight text-white"
           >
             Sobre mim
           </motion.h2>
@@ -82,7 +82,7 @@ export function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="mt-4 max-w-2xl text-neutral-400"
+            className="mt-4 max-w-2xl leading-relaxed text-neutral-400"
           >
             Sou estudante de Engenharia de Software e desenvolvedor Back-End em
             formação, com foco no ecossistema .NET. Venho me dedicando ao
@@ -99,7 +99,7 @@ export function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
-                className="rounded-full border border-primary-500/30 bg-primary-500/10 px-4 py-1.5 text-sm text-primary-200"
+                className="rounded-full border border-primary-500/30 bg-primary-500/10 px-4 py-1.5 text-sm text-primary-200 transition duration-200 hover:border-primary-400/60 hover:bg-primary-500/20 hover:text-white"
               >
                 {skill.name}
               </motion.span>
@@ -109,13 +109,13 @@ export function Home() {
       </section>
 
       <section id="projects" className="border-t border-white/10">
-        <div className="mx-auto max-w-5xl px-6 py-20">
+        <div className="mx-auto max-w-5xl px-6 py-16 sm:py-20 lg:py-24">
           <motion.h2
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-3xl font-bold text-white"
+            className="text-3xl font-bold tracking-tight text-white"
           >
             Projetos
           </motion.h2>
@@ -128,12 +128,12 @@ export function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="rounded-2xl border border-white/10 bg-neutral-900/60 p-6 transition hover:border-primary-500/40"
+                className="rounded-2xl border border-white/10 bg-neutral-900/60 p-6 transition duration-300 ease-out hover:-translate-y-1 hover:border-primary-500/40 hover:shadow-xl hover:shadow-primary-500/10"
               >
                 <h3 className="text-lg font-semibold text-white">
                   {project.title}
                 </h3>
-                <p className="mt-2 text-sm text-neutral-400">
+                <p className="mt-2 text-sm leading-relaxed text-neutral-400">
                   {project.description}
                 </p>
                 <div className="mt-4 flex flex-wrap gap-2">

@@ -18,8 +18,14 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
   background-color: var(--color-neutral-950);
+}
+
+::selection {
+  background-color: var(--color-primary-500);
+  color: #ffffff;
 }

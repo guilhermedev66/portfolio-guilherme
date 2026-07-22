@@ -5,7 +5,7 @@ export function Footer() {
 
   return (
     <footer id="contact" className="border-t border-white/10">
-      <div className="mx-auto flex max-w-5xl flex-col items-center gap-6 px-6 py-10 text-center">
+      <div className="mx-auto flex max-w-5xl flex-col items-center gap-6 px-6 py-12 text-center">
         <div>
           <p className="text-lg font-semibold text-white">
             Guilherme Santos da Silva
@@ -15,7 +15,7 @@ export function Footer() {
           </p>
         </div>
 
-        <div className="flex items-center gap-5">
+        <div className="flex items-center gap-3">
           {socialLinks.map(({ label, href, icon: Icon }) => (
             <a
               key={label}
@@ -23,7 +23,7 @@ export function Footer() {
               target="_blank"
               rel="noreferrer"
               aria-label={label}
-              className="text-neutral-400 transition hover:text-primary-300"
+              className="rounded-full p-2.5 text-neutral-400 transition duration-200 hover:scale-110 hover:bg-primary-500/10 hover:text-primary-300 focus-visible:scale-110 focus-visible:bg-primary-500/10 focus-visible:text-primary-300 focus-visible:outline-none"
             >
               <Icon size={20} />
             </a>
