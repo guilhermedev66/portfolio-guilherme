@@ -2,14 +2,28 @@ export interface Skill {
   name: string
 }
 
-export const skills: Skill[] = [
-  { name: 'C#' },
-  { name: '.NET' },
-  { name: 'ASP.NET Core' },
-  { name: 'APIs REST' },
-  { name: 'Entity Framework' },
-  { name: 'SQL Server' },
-  { name: 'Git' },
-  { name: 'Docker' },
-  { name: 'Azure' },
+export interface SkillCategory {
+  title: string
+  skills: Skill[]
+}
+
+export const skillCategories: SkillCategory[] = [
+  {
+    title: 'Backend',
+    skills: [
+      { name: 'C#' },
+      { name: '.NET' },
+      { name: 'ASP.NET Core' },
+      { name: 'Entity Framework' },
+      { name: 'APIs REST' },
+    ],
+  },
+  {
+    title: 'Banco de Dados',
+    skills: [{ name: 'SQL Server' }],
+  },
+  {
+    title: 'Ferramentas e Versionamento',
+    skills: [{ name: 'Git' }, { name: 'Docker' }, { name: 'Azure' }],
+  },
 ]

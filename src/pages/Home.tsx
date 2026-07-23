@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { FiArrowRight, FiCode } from 'react-icons/fi'
 import { ProfileImagePlaceholder } from '@/components/ProfileImagePlaceholder'
-import { skills } from '@/data/skills'
+import { skillCategories } from '@/data/skills'
 import { projects } from '@/data/projects'
 
 export function Home() {
@@ -91,18 +91,37 @@ export function Home() {
             com Git em cada projeto que construo.
           </motion.p>
 
-          <div className="mt-10 flex flex-wrap gap-3">
-            {skills.map((skill, index) => (
-              <motion.span
-                key={skill.name}
-                initial={{ opacity: 0, y: 12 }}
+          <div className="mt-10 grid gap-6 sm:grid-cols-2">
+            {skillCategories.map((category, catIndex) => (
+              <motion.div
+                key={category.title}
+                initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                className="rounded-full border border-primary-500/30 bg-primary-500/10 px-4 py-1.5 text-sm text-primary-200 transition duration-200 hover:border-primary-400/60 hover:bg-primary-500/20 hover:text-white"
+                transition={{ duration: 0.5, delay: catIndex * 0.1 }}
+                className="rounded-2xl border border-white/10 bg-neutral-900/60 p-6"
               >
-                {skill.name}
-              </motion.span>
+                <h3 className="text-sm font-semibold tracking-wide text-primary-300 uppercase">
+                  {category.title}
+                </h3>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {category.skills.map((skill, index) => (
+                    <motion.span
+                      key={skill.name}
+                      initial={{ opacity: 0, y: 12 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{
+                        duration: 0.4,
+                        delay: catIndex * 0.1 + index * 0.05,
+                      }}
+                      className="rounded-full border border-primary-500/30 bg-primary-500/10 px-4 py-1.5 text-sm text-primary-200 transition duration-200 hover:border-primary-400/60 hover:bg-primary-500/20 hover:text-white"
+                    >
+                      {skill.name}
+                    </motion.span>
+                  ))}
+                </div>
+              </motion.div>
             ))}
           </div>
         </div>
