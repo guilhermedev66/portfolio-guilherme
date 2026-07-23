@@ -41,7 +41,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
               target="_blank"
               rel="noreferrer"
               aria-label={`Repositório do projeto ${title} no GitHub`}
-              className="inline-flex items-center gap-1.5 text-sm text-neutral-400 transition duration-200 hover:text-primary-300"
+              className="inline-flex items-center gap-1.5 rounded text-sm text-neutral-400 transition duration-200 hover:text-primary-300 focus-visible:text-primary-300 focus-visible:underline focus-visible:outline-none"
             >
               <FiGithub size={16} />
               GitHub
@@ -53,7 +53,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
               target="_blank"
               rel="noreferrer"
               aria-label={`Demo do projeto ${title}`}
-              className="inline-flex items-center gap-1.5 text-sm text-neutral-400 transition duration-200 hover:text-primary-300"
+              className="inline-flex items-center gap-1.5 rounded text-sm text-neutral-400 transition duration-200 hover:text-primary-300 focus-visible:text-primary-300 focus-visible:underline focus-visible:outline-none"
             >
               <FiExternalLink size={16} />
               Demo
