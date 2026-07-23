@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { FiArrowRight, FiCode } from 'react-icons/fi'
 import { ProfileImagePlaceholder } from '@/components/ProfileImagePlaceholder'
+import { ProjectCard } from '@/components/ProjectCard'
 import { skillCategories } from '@/data/skills'
 import { projects } from '@/data/projects'
 
@@ -141,31 +142,7 @@ export function Home() {
 
           <div className="mt-10 grid gap-6 sm:grid-cols-2">
             {projects.map((project, index) => (
-              <motion.div
-                key={project.title}
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="rounded-2xl border border-white/10 bg-neutral-900/60 p-6 transition duration-300 ease-out hover:-translate-y-1 hover:border-primary-500/40 hover:shadow-xl hover:shadow-primary-500/10"
-              >
-                <h3 className="text-lg font-semibold text-white">
-                  {project.title}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-neutral-400">
-                  {project.description}
-                </p>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {project.stack.map((tech) => (
-                    <span
-                      key={tech}
-                      className="rounded-full bg-primary-500/10 px-3 py-1 text-xs text-primary-300"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </motion.div>
+              <ProjectCard key={project.id} project={project} index={index} />
             ))}
           </div>
         </div>
