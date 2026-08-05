@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion'
-import { FiUser } from 'react-icons/fi'
 
 export function ProfileImagePlaceholder() {
   return (
@@ -16,8 +15,11 @@ export function ProfileImagePlaceholder() {
         transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
         className="relative flex h-full w-full items-center justify-center rounded-full border-2 border-primary-500/60 bg-neutral-900/60 shadow-[0_0_50px_-12px] shadow-primary-500/60 backdrop-blur-sm"
       >
-        <FiUser size={64} className="text-primary-300/50" aria-hidden="true" />
-        <span className="sr-only">Foto de perfil em breve</span>
+        <img
+          src="/images/guilherme-profile.jpg"
+          alt="Guilherme Santos da Silva"
+          className="h-full w-full rounded-full object-cover object-top"
+        />
       </motion.div>
     </div>
   )

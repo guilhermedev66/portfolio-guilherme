@@ -62,7 +62,9 @@ export function Home() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="flex justify-center lg:justify-end"
         >
-          <ProfileImagePlaceholder />
+          <div className="min-[870px]:max-lg:-translate-x-[45px] lg:-translate-y-[75px]">
+            <ProfileImagePlaceholder />
+          </div>
         </motion.div>
       </section>
 
