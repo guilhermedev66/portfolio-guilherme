@@ -12,7 +12,7 @@ Portfólio pessoal desenvolvido para apresentar minha trajetória, projetos e ev
 ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-8F6CE4?style=for-the-badge)
 
-[![Ver portfólio online](https://img.shields.io/badge/Ver_portfólio_online-6C3FDB?style=for-the-badge&logo=vercel&logoColor=white)](https://portfolio-guilherme-three-beryl.vercel.app)
+[![Ver portfólio online](https://img.shields.io/badge/Ver_portfólio_online-6C3FDB?style=for-the-badge&logo=vercel&logoColor=white)](https://guilhermedev66.vercel.app)
 
 </div>
 
@@ -84,13 +84,13 @@ npm run preview   # preview local do build de produção
 
 O projeto está hospedado na **Vercel**, com deploy automático a cada push na branch `main`. A Vercel detecta o framework (Vite), executa `npm run build` e publica o conteúdo da pasta `dist/`.
 
-🔗 **Versão publicada:** [portfolio-guilherme-three-beryl.vercel.app](https://portfolio-guilherme-three-beryl.vercel.app)
+🔗 **Versão publicada:** [guilhermedev66.vercel.app](https://guilhermedev66.vercel.app)
 
 ## 📫 Contato
 
 - LinkedIn: [linkedin.com/in/guilherme-devvv](https://www.linkedin.com/in/guilherme-devvv/)
 - GitHub: [github.com/guilhermedev66](https://github.com/guilhermedev66)
-- Portfólio: [portfolio-guilherme-three-beryl.vercel.app](https://portfolio-guilherme-three-beryl.vercel.app)
+- Portfólio: [guilhermedev66.vercel.app](https://guilhermedev66.vercel.app)
 
 ## 📄 Licença
 
