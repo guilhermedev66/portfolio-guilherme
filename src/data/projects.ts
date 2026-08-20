@@ -8,7 +8,6 @@ export interface Project {
   demoUrl?: string
   demoNote?: string
   image?: string
-  featured?: boolean
 }
 
 export const projects: Project[] = [
@@ -30,22 +29,23 @@ export const projects: Project[] = [
     frontendUrl: 'https://github.com/guilhermedev66/HelpDeskWeb',
     demoUrl: 'https://helpdesk-web-omega.vercel.app',
     demoNote: 'API em infraestrutura gratuita: 1º acesso pode levar alguns segundos (cold start).',
-    featured: true,
   },
   {
     id: 'task-manager-api',
     title: 'TaskManagerAPI',
     description:
-      'API REST para gerenciamento de tarefas desenvolvida em ASP.NET Core. Permite autenticação de usuários com JWT e operações de CRUD de tarefas, utilizando Entity Framework Core e documentação interativa com Swagger.',
+      'Sistema full-stack para gerenciamento de tarefas. Autenticação JWT com refresh token rotativo e detecção de reuso, isolamento de dados por usuário, rate limiting e health checks no back-end em ASP.NET Core, com front-end em React e TypeScript consumindo a API real em produção.',
     stack: [
       'C#',
-      '.NET 10',
-      'ASP.NET Core Web API',
+      '.NET / ASP.NET Core',
       'Entity Framework Core',
-      'SQLite',
-      'JWT Authentication',
-      'Swagger / OpenAPI',
+      'JWT + Refresh Token',
+      'React',
+      'TypeScript',
+      'Docker',
     ],
     githubUrl: 'https://github.com/guilhermedev66/TaskManagerAPI',
+    frontendUrl: 'https://github.com/guilhermedev66/TaskManagerFrontend',
+    demoUrl: 'https://taskmanagerfrontend-lac.vercel.app',
   },
 ]

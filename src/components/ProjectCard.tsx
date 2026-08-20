@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { FiExternalLink, FiGithub, FiStar } from 'react-icons/fi'
+import { FiExternalLink, FiGithub } from 'react-icons/fi'
 import type { Project } from '@/data/projects'
 
 interface ProjectCardProps {
@@ -8,17 +8,8 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project, index }: ProjectCardProps) {
-  const {
-    title,
-    description,
-    stack,
-    githubUrl,
-    frontendUrl,
-    demoUrl,
-    demoNote,
-    image,
-    featured,
-  } = project
+  const { title, description, stack, githubUrl, frontendUrl, demoUrl, demoNote, image } =
+    project
 
   return (
     <motion.div
@@ -26,11 +17,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className={`overflow-hidden rounded-2xl border bg-neutral-900/60 transition duration-300 ease-out hover:-translate-y-1 hover:shadow-xl ${
-        featured
-          ? 'border-primary-500/40 shadow-lg shadow-primary-500/10 hover:border-primary-400/60 hover:shadow-primary-500/20'
-          : 'border-white/10 hover:border-primary-500/40 hover:shadow-primary-500/10'
-      }`}
+      className="overflow-hidden rounded-2xl border border-white/10 bg-neutral-900/60 transition duration-300 ease-out hover:-translate-y-1 hover:border-primary-500/40 hover:shadow-xl hover:shadow-primary-500/10"
     >
       {image && (
         <img
@@ -41,15 +28,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
       )}
 
       <div className="p-6">
-        <div className="flex items-center justify-between gap-3">
-          <h3 className="text-lg font-semibold text-white">{title}</h3>
-          {featured && (
-            <span className="inline-flex shrink-0 items-center gap-1 rounded-full border border-primary-500/40 bg-primary-500/10 px-2.5 py-1 text-xs font-medium text-primary-300">
-              <FiStar size={12} />
-              Destaque
-            </span>
-          )}
-        </div>
+        <h3 className="text-lg font-semibold text-white">{title}</h3>
 
         <p className="mt-2 text-sm leading-relaxed text-neutral-400">
           {description}
