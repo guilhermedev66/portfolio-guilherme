@@ -12,6 +12,43 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 'barber-booking',
+    title: 'Barber Booking Platform',
+    description:
+      'Plataforma full-stack de agendamento para barbearias com um booking engine protegido contra double-booking real: checagem de conflito em memória e, como fonte da verdade, uma exclusion constraint no PostgreSQL que barra sobreposição de horários mesmo sob concorrência — validado com testes de integração contra PostgreSQL real via Testcontainers. RBAC (Customer/Barber/Admin), disponibilidade por profissional/timezone e encaixe walk-in.',
+    stack: [
+      'C#',
+      '.NET / ASP.NET Core',
+      'PostgreSQL',
+      'JWT + RBAC',
+      'React',
+      'TypeScript',
+      'Docker',
+    ],
+    githubUrl: 'https://github.com/guilhermedev66/barber-booking-platform',
+    demoUrl: 'https://barber-booking-platform-ten.vercel.app',
+    demoNote:
+      'API em infraestrutura gratuita (Render): 1º acesso pode levar até ~50s (cold start).',
+  },
+  {
+    id: 'order-inventory',
+    title: 'Order & Inventory',
+    description:
+      'Sistema full-stack de gestão de catálogo, fornecedores, estoque e pedidos, com reserva de estoque atômica via SQL transacional: sob duas reservas concorrentes pelas últimas unidades, apenas uma prossegue, sem overselling. Invariantes de saldo também protegidas no PostgreSQL, movimentações auditáveis append-only e pedidos com rollback integral em caso de falha parcial.',
+    stack: [
+      'C#',
+      '.NET / ASP.NET Core',
+      'PostgreSQL',
+      'JWT + RBAC',
+      'React',
+      'TypeScript',
+      'Docker',
+    ],
+    githubUrl: 'https://github.com/guilhermedev66/OrderInventory',
+    demoUrl: 'https://order-inventory-psi.vercel.app',
+    demoNote: 'API em infraestrutura gratuita: 1º acesso pode levar alguns segundos (cold start).',
+  },
+  {
     id: 'helpdesk',
     title: 'HelpDesk',
     description:
