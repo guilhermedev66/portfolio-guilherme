@@ -3,13 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#863bff" />
+    <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
 
-    <title>Guilherme Santos da Silva | Desenvolvedor Back-End .NET</title>
+    <title>Guilherme Santos da Silva | Back-End Developer — C# &amp; .NET</title>
     <meta
       name="description"
-      content="Portfólio de Guilherme Santos da Silva, desenvolvedor Back-End .NET (C#, ASP.NET Core) e estudante de Engenharia de Software."
+      content="Portfólio de Guilherme Santos da Silva, desenvolvedor Back-End em C# e ASP.NET Core, estudante de Engenharia de Software. Projetos full-stack com APIs, PostgreSQL e testes automatizados."
     />
+
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme')
+          var theme =
+            stored === 'light' || stored === 'dark'
+              ? stored
+              : window.matchMedia('(prefers-color-scheme: light)').matches
+                ? 'light'
+                : 'dark'
+          document.documentElement.dataset.theme = theme
+        } catch (e) {
+          document.documentElement.dataset.theme = 'dark'
+        }
+      })()
+    </script>
 
     <!-- Favicons -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -20,11 +38,11 @@
     <meta property="og:locale" content="pt_BR" />
     <meta
       property="og:title"
-      content="Guilherme Santos da Silva | Desenvolvedor Back-End .NET"
+      content="Guilherme Santos da Silva | Back-End Developer — C# &amp; .NET"
     />
     <meta
       property="og:description"
-      content="Portfólio de Guilherme Santos da Silva, desenvolvedor Back-End .NET (C#, ASP.NET Core) e estudante de Engenharia de Software."
+      content="Portfólio de Guilherme Santos da Silva, desenvolvedor Back-End em C# e ASP.NET Core, estudante de Engenharia de Software. Projetos full-stack com APIs, PostgreSQL e testes automatizados."
     />
     <meta property="og:image" content="https://guilhermedev66.vercel.app/og-image.png" />
     <meta property="og:url" content="https://guilhermedev66.vercel.app" />
@@ -33,11 +51,11 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="Guilherme Santos da Silva | Desenvolvedor Back-End .NET"
+      content="Guilherme Santos da Silva | Back-End Developer — C# &amp; .NET"
     />
     <meta
       name="twitter:description"
-      content="Portfólio de Guilherme Santos da Silva, desenvolvedor Back-End .NET (C#, ASP.NET Core) e estudante de Engenharia de Software."
+      content="Portfólio de Guilherme Santos da Silva, desenvolvedor Back-End em C# e ASP.NET Core, estudante de Engenharia de Software. Projetos full-stack com APIs, PostgreSQL e testes automatizados."
     />
     <meta name="twitter:image" content="https://guilhermedev66.vercel.app/og-image.png" />
 

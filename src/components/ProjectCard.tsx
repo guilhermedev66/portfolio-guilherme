@@ -17,7 +17,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="overflow-hidden rounded-2xl border border-white/10 bg-neutral-900/60 transition duration-300 ease-out hover:-translate-y-1 hover:border-primary-500/40 hover:shadow-xl hover:shadow-primary-500/10"
+      className="overflow-hidden rounded-2xl border border-line bg-surface transition duration-300 ease-out hover:-translate-y-1 hover:border-chip-line hover:shadow-xl hover:shadow-primary-500/10"
     >
       {image && (
         <img
@@ -28,9 +28,9 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
       )}
 
       <div className="p-6">
-        <h3 className="text-lg font-semibold text-white">{title}</h3>
+        <h3 className="text-lg font-semibold text-ink">{title}</h3>
 
-        <p className="mt-2 text-sm leading-relaxed text-neutral-400">
+        <p className="mt-2 text-sm leading-relaxed text-ink-muted">
           {description}
         </p>
 
@@ -38,7 +38,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           {stack.map((tech) => (
             <span
               key={tech}
-              className="rounded-full bg-primary-500/10 px-3 py-1 text-xs text-primary-300"
+              className="rounded-full bg-chip px-3 py-1 text-xs text-chip-ink"
             >
               {tech}
             </span>
@@ -53,7 +53,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                 target="_blank"
                 rel="noreferrer"
                 aria-label={`Demo do projeto ${title}`}
-                className="inline-flex items-center gap-1.5 rounded-full bg-primary-600 px-4 py-2 text-sm font-medium text-white transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-primary-500 hover:shadow-lg hover:shadow-primary-500/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950"
+                className="inline-flex items-center gap-1.5 rounded-full bg-primary-600 px-4 py-2 text-sm font-medium text-white transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-primary-500 hover:shadow-lg hover:shadow-primary-500/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2 focus-visible:ring-offset-canvas"
               >
                 <FiExternalLink size={16} />
                 Live Demo
@@ -69,7 +69,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                     ? `Repositório do back-end do projeto ${title} no GitHub`
                     : `Repositório do projeto ${title} no GitHub`
                 }
-                className="inline-flex items-center gap-1.5 rounded text-sm text-neutral-400 transition duration-200 hover:text-primary-300 focus-visible:text-primary-300 focus-visible:underline focus-visible:outline-none"
+                className="inline-flex items-center gap-1.5 rounded text-sm text-ink-muted transition duration-200 hover:text-chip-ink focus-visible:text-chip-ink focus-visible:underline focus-visible:outline-none"
               >
                 <FiGithub size={16} />
                 {frontendUrl ? 'Backend' : 'GitHub'}
@@ -81,7 +81,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                 target="_blank"
                 rel="noreferrer"
                 aria-label={`Repositório do front-end do projeto ${title} no GitHub`}
-                className="inline-flex items-center gap-1.5 rounded text-sm text-neutral-400 transition duration-200 hover:text-primary-300 focus-visible:text-primary-300 focus-visible:underline focus-visible:outline-none"
+                className="inline-flex items-center gap-1.5 rounded text-sm text-ink-muted transition duration-200 hover:text-chip-ink focus-visible:text-chip-ink focus-visible:underline focus-visible:outline-none"
               >
                 <FiGithub size={16} />
                 Frontend
@@ -90,9 +90,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           </div>
         )}
 
-        {demoNote && (
-          <p className="mt-3 text-xs text-neutral-500">{demoNote}</p>
-        )}
+        {demoNote && <p className="mt-3 text-xs text-ink-subtle">{demoNote}</p>}
       </div>
     </motion.div>
   )

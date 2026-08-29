@@ -8,7 +8,7 @@ interface MainLayoutProps {
 
 export function MainLayout({ children }: MainLayoutProps) {
   return (
-    <div className="flex min-h-screen flex-col bg-neutral-950 text-neutral-100">
+    <div className="flex min-h-screen flex-col bg-canvas text-ink transition-colors duration-200">
       <Header />
       <main className="flex-1">{children}</main>
       <Footer />

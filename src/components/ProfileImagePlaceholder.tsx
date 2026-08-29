@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 
 export function ProfileImagePlaceholder() {
   return (
-    <div className="relative flex h-48 w-48 shrink-0 items-center justify-center sm:h-64 sm:w-64 lg:h-72 lg:w-72">
+    <div className="relative flex h-48 w-48 shrink-0 items-center justify-center sm:h-60 sm:w-60 md:h-64 md:w-64 lg:h-80 lg:w-80">
       <motion.div
         aria-hidden="true"
         animate={{ opacity: [0.35, 0.65, 0.35], scale: [1, 1.08, 1] }}
@@ -13,11 +13,16 @@ export function ProfileImagePlaceholder() {
       <motion.div
         animate={{ y: [0, -12, 0] }}
         transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
-        className="relative flex h-full w-full items-center justify-center rounded-full border-2 border-primary-500/60 bg-neutral-900/60 shadow-[0_0_50px_-12px] shadow-primary-500/60 backdrop-blur-sm"
+        className="relative flex h-full w-full items-center justify-center rounded-full border-2 border-primary-500/60 bg-surface shadow-[0_0_50px_-12px] shadow-primary-500/60 backdrop-blur-sm"
       >
         <img
           src="/images/guilherme-profile.jpg"
           alt="Guilherme Santos da Silva"
+          width={320}
+          height={320}
+          loading="eager"
+          decoding="async"
+          fetchPriority="high"
           className="h-full w-full rounded-full object-cover object-top"
         />
       </motion.div>

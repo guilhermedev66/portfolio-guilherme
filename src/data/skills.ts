@@ -14,16 +14,26 @@ export const skillCategories: SkillCategory[] = [
       { name: 'C#' },
       { name: '.NET' },
       { name: 'ASP.NET Core' },
-      { name: 'Entity Framework' },
+      { name: 'Entity Framework Core' },
       { name: 'APIs REST' },
+      { name: 'JWT / RBAC' },
     ],
   },
   {
-    title: 'Banco de Dados',
-    skills: [{ name: 'SQL Server' }],
+    title: 'Dados e Testes',
+    skills: [
+      { name: 'PostgreSQL' },
+      { name: 'SQL Server' },
+      { name: 'xUnit' },
+      { name: 'Testcontainers' },
+    ],
   },
   {
-    title: 'Ferramentas e Versionamento',
-    skills: [{ name: 'Git' }, { name: 'Docker' }, { name: 'Azure' }],
+    title: 'Ferramentas',
+    skills: [{ name: 'Git' }, { name: 'Docker' }, { name: 'GitHub Actions (CI)' }],
+  },
+  {
+    title: 'Frontend (complementar)',
+    skills: [{ name: 'React' }, { name: 'TypeScript' }],
   },
 ]

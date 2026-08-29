@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
 @theme {
   --color-primary-50: #f4f1fd;
   --color-primary-100: #e9e2fb;
@@ -14,6 +16,36 @@
   --color-primary-950: #180b3d;
 
   --font-sans: 'Segoe UI', ui-sans-serif, system-ui, sans-serif;
+
+  /* Semantic tokens: dark is the default/brand theme, overridden under [data-theme="light"] below */
+  --color-canvas: #0a0a0a;
+  --color-surface: rgba(23, 23, 23, 0.6);
+  --color-ink: #ffffff;
+  --color-ink-muted: #a3a3a3;
+  --color-ink-subtle: #737373;
+  --color-line: rgba(255, 255, 255, 0.1);
+  --color-header: rgba(10, 10, 10, 0.8);
+  --color-chip: rgba(108, 63, 219, 0.1);
+  --color-chip-line: rgba(108, 63, 219, 0.3);
+  --color-chip-ink: #b39eef;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+  --color-canvas: #ffffff;
+  --color-surface: #f7f5fc;
+  --color-ink: #171717;
+  --color-ink-muted: #52525b;
+  --color-ink-subtle: #6b7280;
+  --color-line: rgba(0, 0, 0, 0.1);
+  --color-header: rgba(255, 255, 255, 0.8);
+  --color-chip: rgba(108, 63, 219, 0.08);
+  --color-chip-line: rgba(108, 63, 219, 0.25);
+  --color-chip-ink: #4321ac;
 }
 
 html {
@@ -22,7 +54,8 @@ html {
 }
 
 body {
-  background-color: var(--color-neutral-950);
+  background-color: var(--color-canvas);
+  color: var(--color-ink);
 }
 
 ::selection {
