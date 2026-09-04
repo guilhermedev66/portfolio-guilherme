@@ -12,6 +12,42 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 'cmms',
+    title: 'CMMS — Maintenance & Asset Management System',
+    description:
+      'Sistema full-stack de gestão de manutenção e ativos industriais, cobrindo ativos, solicitações, ordens de serviço e manutenção preventiva. A geração concorrente de ordens preventivas é protegida no PostgreSQL com locking e revalidação transacional contra duplicidade, além de execução técnica, QR como localizador, auditoria, custos, KPIs operacionais e atualizações em tempo real via SignalR.',
+    stack: [
+      'C#',
+      '.NET / ASP.NET Core',
+      'PostgreSQL',
+      'React',
+      'TypeScript',
+      'SignalR',
+      'Docker',
+    ],
+    githubUrl: 'https://github.com/guilhermedev66/CMMS',
+    demoUrl: 'https://cmms-web-mocha.vercel.app',
+    demoNote: 'API em infraestrutura gratuita: 1º acesso pode levar alguns segundos (cold start).',
+  },
+  {
+    id: 'fluxora-erp',
+    title: 'Fluxora ERP',
+    description:
+      'ERP full-stack com gestão operacional e financeira, controle de acesso por papéis, auditoria e processamento confiável de operações financeiras. O back-end implementa idempotência e controle de concorrência para proteger transações críticas, além de jobs agendados, relatórios e regras de negócio no domínio, com front-end em React e TypeScript consumindo a API real em produção.',
+    stack: [
+      'C#',
+      '.NET / ASP.NET Core',
+      'PostgreSQL',
+      'JWT + RBAC',
+      'React',
+      'TypeScript',
+      'Docker',
+    ],
+    githubUrl: 'https://github.com/guilhermedev66/FluxoraERP',
+    demoUrl: 'https://fluxora-erp.vercel.app',
+    demoNote: 'API em infraestrutura gratuita: 1º acesso pode levar alguns segundos (cold start).',
+  },
+  {
     id: 'barber-booking',
     title: 'Barber Booking Platform',
     description:
