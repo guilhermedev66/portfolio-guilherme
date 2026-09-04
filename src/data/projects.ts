@@ -85,4 +85,23 @@ export const projects: Project[] = [
     frontendUrl: 'https://github.com/guilhermedev66/TaskManagerFrontend',
     demoUrl: 'https://taskmanagerfrontend-lac.vercel.app',
   },
+  {
+    id: 'cmms',
+    title: 'CMMS — Maintenance & Asset Management System',
+    description:
+      'Sistema de gestão de manutenção e ativos com Work Orders, manutenção preventiva, execução técnica, QR e KPIs. Toda disputa por recurso é uma garantia a nível de banco, não uma checagem de aplicação: self-claim de Work Order via UPDATE condicional atômico, overlap de downtime bloqueado por exclusion constraint do PostgreSQL, e geração de manutenção preventiva com SKIP LOCKED — tudo provado com requisições HTTP concorrentes reais contra PostgreSQL via Testcontainers.',
+    stack: [
+      'C#',
+      '.NET / ASP.NET Core',
+      'PostgreSQL',
+      'SignalR',
+      'React',
+      'TypeScript',
+      'Docker',
+    ],
+    githubUrl: 'https://github.com/guilhermedev66/CMMS',
+    demoUrl: 'https://cmms-web-mocha.vercel.app',
+    demoNote:
+      'API em infraestrutura gratuita (Render): 1º acesso pode levar até ~50s (cold start).',
+  },
 ]
